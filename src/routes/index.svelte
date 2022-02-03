@@ -1,6 +1,5 @@
 <script>
-import { onMount } from "svelte";
-
+	import { onMount } from "svelte";
 
 	let import_color = '#f26522';
 	$: encoded_color = encodeURIComponent(import_color);
@@ -17,6 +16,7 @@ import { onMount } from "svelte";
 
 <svelte:head>
 	<title>Bootstrap Customizer by URL</title>
+	<meta name="description" content="Customize bootstrap css through URL parameters without a build step" />
 	<link rel="stylesheet" href="/bootstrap/5.1.3.css?primary=white"><!-- insert once plain so context switching is not dificult-->
 	<link rel="stylesheet" href="{`/bootstrap/5.1.3.css?primary=${encoded_color}${encoded_other}`}">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
