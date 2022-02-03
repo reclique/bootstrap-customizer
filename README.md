@@ -22,3 +22,11 @@ Cloudflare automatically listens for changes on the master branch and deploys th
 
 You can preview the production build with `npm run preview`.
 
+## TODOs
+
+* deploy to cloudflare
+* add tags
+* link to variable page
+* do we need legal language?
+* add language about submitting PRs with new bootstrap versions?
+* default css to minimized and flag to skip minimizing?
