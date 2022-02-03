@@ -2,7 +2,7 @@
 
 This is a small application that can take bootstrap variables through a URL and responds and returns the comiled CSS. It's great for rapid prototyping or situations were you don't want to build every bootstrap color. This tool will be less necessary once bootstrap defaults to CSS variables globally instead of relying in SASS variables.
 
-!> This tool is published at bs.reclique.com
+!> This tool is published at [bs.reclique.com](https://bs.reclique.com)
 
 
 ## Developing
