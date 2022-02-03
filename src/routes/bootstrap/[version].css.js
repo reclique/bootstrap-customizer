@@ -4,6 +4,7 @@ import fs from 'fs';
 export const get = async ({params,url}) =>{
 	let status = 500;
 	let response = 'Undefined error';
+	let headers = {};
 	try{
 		let {version} = params;
 		if(!version) throw new Error('`version` is not defined');
@@ -20,13 +21,19 @@ export const get = async ({params,url}) =>{
 			loadPaths: [`src/bs_versions/${version}`],
 		});
 		response = result.css;
+		status = 200;
+		headers = {
+			'Cache-Control': 'max-age=604800',
+			'content-type': 'text/css; charset=utf-8'
+		};
 	}
 	catch(e){
 		if(e.code == 'ENOENT') response = 'Bootstrap version not found';
 		else response = e.message;
 	}
 	return {
-		status: status,
+		headers: headers,
+		status:status,
 		body: response,
 	};
 };
