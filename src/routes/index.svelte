@@ -43,15 +43,15 @@
 		<h3>Elements will look like this</h3>
 		<div class="examples">
 			<div>
-				<label>anchor tag</label>
-				<a href="#">My Link</a>
+				<small>anchor tag</small>
+				<a href="#void">My Link</a>
 			</div>
 			<div>
-				<label>.btn .btn-primary</label>
+				<small>.btn .btn-primary</small>
 				<button class="btn btn-primary">Primary</button>
 			</div>
 			<div>
-				<label>.btn .btn-outline-primary</label>
+				<small>.btn .btn-outline-primary</small>
 				<button class="btn btn-outline-primary">Outline Primary</button>
 			</div>
 		</div>
@@ -81,7 +81,7 @@
 		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 		margin: 0 2rem 2rem 0;
 	}
-	.examples > div > label{
+	.examples > div > small{
 		display: block;
 		margin-bottom: .5rem;
 		color: #7a7a7a;
