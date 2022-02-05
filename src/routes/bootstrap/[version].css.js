@@ -1,5 +1,5 @@
 import sass from 'sass';
-import fs from 'fs';
+// import fs from 'fs';
 
 export const get = async ({params,url}) =>{
 	let status = 500;
@@ -14,12 +14,13 @@ export const get = async ({params,url}) =>{
 			let val = query.get(key);
 			prefixes.push(`$${key}:${val};`);
 		}
-		let file = fs.readFileSync(`src/bs_versions/${version}/bootstrap.scss`);
-		let prefix = prefixes.join('\n') + '\n';
-		let to_compile = prefix + file.toString();
-		let result = await sass.compileStringAsync(to_compile, {
-			loadPaths: [`src/bs_versions/${version}`],
-		});
+		// let file = fs.readFileSync(`src/bs_versions/${version}/bootstrap.scss`);
+		// let prefix = prefixes.join('\n') + '\n';
+		// let to_compile = prefix + file.toString();
+		// let result = await sass.compileStringAsync(to_compile, {
+		// 	loadPaths: [`src/bs_versions/${version}`],
+		// });
+		let result = await sass.compileAsync(`src/bs_versions/${version}/bootstrap.scss`);
 		response = result.css;
 		status = 200;
 		headers = {
