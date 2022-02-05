@@ -1,5 +1,6 @@
 import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-auto';
+// import adapter from '@sveltejs/adapter-node';
 // import adapter from '@sveltejs/adapter-cloudflare';
 // import adapter from './override_module/adapter-cloudflare/index.js';
 
