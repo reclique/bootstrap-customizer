@@ -20,7 +20,12 @@ export const get = async ({params,url}) =>{
 		// let result = await sass.compileStringAsync(to_compile, {
 		// 	loadPaths: [`src/bs_versions/${version}`],
 		// });
+		// let result = await fetch('https://raw.githubusercontent.com/twbs/bootstrap/main/scss/bootstrap.scss')
+		// 	.then(res => res.text());
+		// console.log()
+
 		let result = await sass.compileAsync(`src/bs_versions/${version}/bootstrap.scss`);
+		// let result = await sass.compileAsync('https://raw.githubusercontent.com/twbs/bootstrap/main/scss/bootstrap.scss');
 		response = result.css;
 		status = 200;
 		headers = {
@@ -31,6 +36,8 @@ export const get = async ({params,url}) =>{
 	catch(e){
 		if(e.code == 'ENOENT') response = 'Bootstrap version not found';
 		else response = e.message;
+		response = JSON.stringify(e);
+		response = `/* ${response} */`;
 	}
 	return {
 		headers: headers,
