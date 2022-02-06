@@ -1,0 +1,7 @@
+{
+	"functions": {
+		"render/index": {
+			"includeFiles": "bs_versions/**"
+		}
+	}
+}

@@ -1,5 +1,6 @@
 import sass from 'sass';
-// import fs from 'fs';
+import fs from 'fs';
+import { join } from 'path';
 
 export const get = async ({params,url}) =>{
 	let status = 500;
@@ -14,18 +15,18 @@ export const get = async ({params,url}) =>{
 			let val = query.get(key);
 			prefixes.push(`$${key}:${val};`);
 		}
-		// let file = fs.readFileSync(`src/bs_versions/${version}/bootstrap.scss`);
-		// let prefix = prefixes.join('\n') + '\n';
-		// let to_compile = prefix + file.toString();
-		// let result = await sass.compileStringAsync(to_compile, {
-		// 	loadPaths: [`src/bs_versions/${version}`],
-		// });
+		let file = fs.readFileSync(join(__dirname,`bs_versions/${version}/bootstrap.scss`));
+		let prefix = prefixes.join('\n') + '\n';
+		let to_compile = prefix + file.toString();
+		let result = await sass.compileStringAsync(to_compile, {
+			loadPaths: [`bs_versions/${version}`],
+		});
 		// let result = await fetch('https://raw.githubusercontent.com/twbs/bootstrap/main/scss/bootstrap.scss')
 		// 	.then(res => res.text());
 		// console.log()
-		let path = `static/bs_versions/${version}/bootstrap.scss`;
-		path = `bs_versions/${version}/bootstrap.scss`;
-		let result = await sass.compileAsync(path);
+		// let path = `static/bs_versions/${version}/bootstrap.scss`;//dev
+		// path = `bs_versions/${version}/bootstrap.scss`;//prod
+		// let result = await sass.compileAsync(path);
 		// let result = await sass.compileAsync('https://raw.githubusercontent.com/twbs/bootstrap/main/scss/bootstrap.scss');
 		response = result.css;
 		status = 200;
