@@ -1,6 +1,6 @@
 {
 	"functions": {
-		".vercel/functions/render/index": {
+		"*": {
 			"includeFiles": "bs_versions/**"
 		}
 	}
