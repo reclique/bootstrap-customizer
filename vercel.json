@@ -1,6 +1,6 @@
 {
 	"functions": {
-		"render/index": {
+		"render/index.js": {
 			"includeFiles": "bs_versions/**"
 		}
 	}
