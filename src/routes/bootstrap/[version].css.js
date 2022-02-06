@@ -19,7 +19,7 @@ export const get = async ({params,url}) =>{
 		let prefix = prefixes.join('\n') + '\n';
 		let to_compile = prefix + file.toString();
 		let result = await sass.compileStringAsync(to_compile, {
-			loadPaths: [`bs_versions/${version}`],
+			loadPaths: [ __dirname + `/bs_versions/${version}`],
 		});
 		// let result = await fetch('https://raw.githubusercontent.com/twbs/bootstrap/main/scss/bootstrap.scss')
 		// 	.then(res => res.text());
