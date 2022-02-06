@@ -24,7 +24,7 @@ export const get = async ({params,url}) =>{
 		// 	.then(res => res.text());
 		// console.log()
 		let path = `static/bs_versions/${version}/bootstrap.scss`;
-		path = `../bs_versions/${version}/bootstrap.scss`;
+		path = `bs_versions/${version}/bootstrap.scss`;
 		let result = await sass.compileAsync(path);
 		// let result = await sass.compileAsync('https://raw.githubusercontent.com/twbs/bootstrap/main/scss/bootstrap.scss');
 		response = result.css;
