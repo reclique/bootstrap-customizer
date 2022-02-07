@@ -10,7 +10,7 @@
 
 	let domain = '';
 	onMount(() => {
-		domain = `httsp://${window.location.host}`;
+		domain = `https://${window.location.host}`;
 	});
 </script>
 
