@@ -2,7 +2,7 @@
 
 This is a small application that can take bootstrap variables through a URL and responds and returns the comiled CSS. It's great for rapid prototyping or situations were you don't want to build every bootstrap color. This tool will be less necessary once bootstrap defaults to CSS variables globally instead of relying in SASS variables.
 
-!> This tool is published at [bootstrap.reclique.com](https://bootstrap.reclique.com)
+!> This tool is published at [customizer.reclique.com](https://customizer.reclique.com)
 
 
 ## Developing
@@ -18,13 +18,13 @@ npm run dev -- --open
 
 ## Building
 
-Cloudflare automatically listens for changes on the master branch and deploys them. There is no need to run `npm run build` since cloudflare will do it.
+Cloudflare automatically listens for changes on the master branch and deploys them. There is no need to run `npm run build` since ~cloudflare~ `eb` will do it.
 
 You can preview the production build with `npm run preview`.
 
 ## TODOs
 
-* ~deploy to cloudflare~
+* ~deploy to cloudflare~ Abandoned because cloudflare pages cannot use `fs`. Deploying to aws-eb instead
 * add tags
 * link to variable page
 * prism (or other) syntax highlighting
