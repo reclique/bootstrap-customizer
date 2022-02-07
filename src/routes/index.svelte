@@ -8,6 +8,14 @@
 
 	let yr = (new Date()).getFullYear();
 
+	let tags = [
+		'bootstrap',
+		'cdn',
+		'customize',
+		'primary color',
+		'url',
+	];
+
 	let domain = '';
 	onMount(() => {
 		domain = `https://${window.location.host}`;
@@ -27,6 +35,13 @@
 		<h1><i class="fal fa-palette"></i> Easily customize Bootstrap without a build step</h1>
 		<p>Sometimes, you want to easily link the bootstrap stylesheet and only changing some of the bootstrap variables.</p>
 		
+		<div class="tags">
+			<i class="far fa-tags"></i>
+			{#each tags as tag}
+				<span class="badge bg-secondary">{tag}</span>
+			{/each}
+		</div>
+
 		<h2>Example</h2>
 		<div class="mb-3">
 			<label class="d-flex align-items-center">
@@ -71,6 +86,21 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+	}
+	.tags{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+	.tags > *{
+		margin-right: .5rem;
+	}
+	.tags > .badge{
+		font-weight: normal;
+		color: var(--bs-body-color);
+		background: var(--bs-gray-200)!important;
 	}
 	.examples{
 		display: flex;

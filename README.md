@@ -25,7 +25,7 @@ You can preview the production build with `npm run preview`.
 ## TODOs
 
 * ~deploy to cloudflare~ Abandoned because cloudflare pages cannot use `fs`. Deploying to aws-eb instead
-* add tags
+* ~add tags~
 * link to variable page
 * prism (or other) syntax highlighting
 * do we need legal language?
