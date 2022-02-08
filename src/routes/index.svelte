@@ -27,21 +27,21 @@
 	<meta name="description" content="Customize bootstrap css through URL parameters without a build step" />
 	<link rel="stylesheet" href="/bootstrap/5.1.3.css?primary=gray"><!-- insert once plain so context switching is not dificult-->
 	<link rel="stylesheet" href="{`/bootstrap/5.1.3.css?primary=${encoded_color}${encoded_other}`}">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<script src="https://kit.fontawesome.com/cf97b14328.js" crossorigin="anonymous"></script>
 </svelte:head>
 
 <div class="main_wrap container pt-5">
 	<main>
 		<header>
-			<i class="fab fa-bootstrap"></i>
-			<i class="fal fa-plus opacity-50"></i>
-			<i class="far fa-palette"></i>
+			<i class="fa-brands fa-bootstrap"></i>
+			<i class="fa-light fa-plus opacity-50"></i>
+			<i class="fa-regular fa-palette"></i>
 		</header>
 		<h1>Easily customize Bootstrap without a build step</h1>
 		<p>Sometimes, you want to easily link the bootstrap stylesheet and only changing some of the bootstrap variables. This would not be necessary if bootstrap defaulted to css variables for their components.</p>
 		
 		<div class="tags mb-4">
-			<i class="far fa-tags"></i>
+			<i class="fa-regular fa-tags"></i>
 			{#each tags as tag}
 				<span class="badge bg-secondary">{tag}</span>
 			{/each}
@@ -81,8 +81,8 @@
 		<input bind:value="{other_variables}" class="form-control mb-4">
 	</main>
 	<footer>
-		<i class="far fa-code"></i> by <a href="https://reclique.com" target="_blank">ReClique</a>
-		<i class="far fa-copyright"></i> {yr}
+		<i class="fa-regular fa-code"></i> by <a href="https://reclique.com" target="_blank">ReClique</a>
+		<i class="fa-regular fa-copyright"></i> {yr}
 	</footer>
 </div>
 
