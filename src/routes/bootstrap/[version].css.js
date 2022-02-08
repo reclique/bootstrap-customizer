@@ -29,7 +29,8 @@ export const get = async ({params,url}) =>{
 		status = 200;
 		headers = {
 			'Cache-Control': 'max-age=604800',
-			'content-type': 'text/css; charset=utf-8'
+			'content-type': 'text/css; charset=utf-8',
+			'Access-Control-Allow-Origin': '*',//allow cross-origin requests
 		};
 	}
 	catch(e){
