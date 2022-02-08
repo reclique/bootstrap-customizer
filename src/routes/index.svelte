@@ -34,7 +34,7 @@
 	<main>
 		<header>
 			<i class="fa-brands fa-bootstrap"></i>
-			<i class="fa-light fa-plus opacity-50"></i>
+			<i class="fa-light fa-plus opacity-50" style="font-size:.6em;"></i>
 			<i class="fa-regular fa-palette"></i>
 		</header>
 		<h1>Easily customize Bootstrap without a build step</h1>
@@ -56,8 +56,8 @@
 		</div>
 
 		<h3>Insert this in your HTML</h3>
-		<pre class="mb-4 bg-secondary bg-opacity-10 p-2">
-			&lt;link href="{domain}/bootstrap/5.1.3.css?blue={encoded_color}{encoded_other}" rel="stylesheet"&gt;
+		<pre class="mb-4 bg-secondary bg-opacity-10 p-2 px-3">
+			&lt;link href="{domain}/bootstrap/5.1.3.css?primary={encoded_color}{encoded_other}" rel="stylesheet"&gt;
 		</pre>
 
 		<h3>Elements will look like this</h3>
@@ -83,6 +83,9 @@
 	<footer>
 		<i class="fa-regular fa-code"></i> by <a href="https://reclique.com" target="_blank">ReClique</a>
 		<i class="fa-regular fa-copyright"></i> {yr}
+
+		<i class="fa-solid fa-circle mx-3" style="vertical-align:middle;font-size:.25em;opacity:.25;"></i>
+		<a href="https://github.com/reclique/bootstrap-customizer" target="_blank"><i class="fa-brands fa-github"></i></a>
 	</footer>
 </div>
 
@@ -97,6 +100,7 @@
 		margin-bottom: 1rem;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 	header i{
 		margin: 0 .5rem;
@@ -140,4 +144,12 @@
 		margin-top: auto;
 		padding: 1rem;
 	}
+	footer a{
+		color: var(--bs-color-50);
+	}
+	/* .fa-circle{
+		opacity: .5;
+		margin: 0 15px;
+		font-size: .5em;
+	} */
 </style>
