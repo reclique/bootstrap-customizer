@@ -28,6 +28,7 @@ You can preview the production build with `npm run preview`.
 * ~add tags~
 * ~link to variable page~
 * ~fix the font awesome CDN~
+* spinner and/or speed new request?
 * prism (or other) syntax highlighting
 * do we need legal language?
 * add language about submitting PRs with new bootstrap versions?

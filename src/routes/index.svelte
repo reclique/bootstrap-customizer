@@ -145,7 +145,7 @@
 		padding: 1rem;
 	}
 	footer a{
-		color: var(--bs-color-50);
+		color: var(--bs-color);
 	}
 	/* .fa-circle{
 		opacity: .5;
