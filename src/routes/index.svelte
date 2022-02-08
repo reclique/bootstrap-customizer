@@ -32,10 +32,15 @@
 
 <div class="main_wrap container pt-5">
 	<main>
-		<h1><i class="fal fa-palette"></i> Easily customize Bootstrap without a build step</h1>
-		<p>Sometimes, you want to easily link the bootstrap stylesheet and only changing some of the bootstrap variables.</p>
+		<header>
+			<i class="fab fa-bootstrap"></i>
+			<i class="far fa-plus opacity-50"></i>
+			<i class="far fa-palette"></i>
+		</header>
+		<h1>Easily customize Bootstrap without a build step</h1>
+		<p>Sometimes, you want to easily link the bootstrap stylesheet and only changing some of the bootstrap variables. This would not be necessary if bootstrap defaulted to css variables for their components.</p>
 		
-		<div class="tags">
+		<div class="tags mb-4">
 			<i class="far fa-tags"></i>
 			{#each tags as tag}
 				<span class="badge bg-secondary">{tag}</span>
@@ -43,7 +48,7 @@
 		</div>
 
 		<h2>Example</h2>
-		<div class="mb-3">
+		<div class="mb-4">
 			<label class="d-flex align-items-center">
 				<span class="me-2">Chose the primary color:</span>
 				<input type="color" bind:value="{import_color}">
@@ -51,12 +56,12 @@
 		</div>
 
 		<h3>Insert this in your HTML</h3>
-		<pre>
+		<pre class="mb-4 bg-secondary bg-opacity-10 p-2">
 			&lt;link href="{domain}/bootstrap/5.1.3.css?blue={encoded_color}{encoded_other}" rel="stylesheet"&gt;
 		</pre>
 
 		<h3>Elements will look like this</h3>
-		<div class="examples">
+		<div class="examples mb-4">
 			<div>
 				<small>anchor tag</small>
 				<a href="#void">My Link</a>
@@ -73,7 +78,7 @@
 		
 		<h3>Other Pro Tips</h3>
 		<p>You can add other paramters to the URL that would be in the _variables.scss in bootstrap. For example: &min-contrast-ratio=2</p>
-		<input bind:value="{other_variables}" class="form-control">
+		<input bind:value="{other_variables}" class="form-control mb-4">
 	</main>
 	<footer>
 		<i class="far fa-code"></i> by <a href="https://reclique.com" target="_blank">ReClique</a>
@@ -87,12 +92,20 @@
 		display: flex;
 		flex-direction: column;
 	}
+	header{
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		display: flex;
+		justify-content: center;
+	}
+	header i{
+		margin: 0 .5rem;
+	}
 	.tags{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items: center;
-		margin-bottom: 1rem;
 	}
 	.tags > *{
 		margin-right: .5rem;
@@ -104,12 +117,14 @@
 	}
 	.examples{
 		display: flex;
+		flex-wrap: wrap;
 	}
 	.examples > div{
 		padding:1rem;
 		border-radius: 0.25rem!important;
 		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 		margin: 0 2rem 2rem 0;
+		white-space: nowrap;
 	}
 	.examples > div > small{
 		display: block;
