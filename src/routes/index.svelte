@@ -34,7 +34,7 @@
 	<main>
 		<header>
 			<i class="fab fa-bootstrap"></i>
-			<i class="far fa-plus opacity-50"></i>
+			<i class="fal fa-plus opacity-50"></i>
 			<i class="far fa-palette"></i>
 		</header>
 		<h1>Easily customize Bootstrap without a build step</h1>
@@ -77,7 +77,7 @@
 		</div>
 		
 		<h3>Other Pro Tips</h3>
-		<p>You can add other paramters to the URL that would be in the _variables.scss in bootstrap. For example: &min-contrast-ratio=2</p>
+		<p>You can add other paramters to the URL that would be in the <a href="https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss" target="_blank">_variables.scss</a> in bootstrap. For example: &min-contrast-ratio=2</p>
 		<input bind:value="{other_variables}" class="form-control mb-4">
 	</main>
 	<footer>

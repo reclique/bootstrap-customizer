@@ -26,7 +26,7 @@ You can preview the production build with `npm run preview`.
 
 * ~deploy to cloudflare~ Abandoned because cloudflare pages cannot use `fs`. Deploying to aws-eb instead
 * ~add tags~
-* link to variable page
+* ~link to variable page~
 * prism (or other) syntax highlighting
 * do we need legal language?
 * add language about submitting PRs with new bootstrap versions?
