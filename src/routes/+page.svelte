@@ -25,7 +25,7 @@
 <svelte:head>
 	<title>Bootstrap Customizer by URL</title>
 	<meta name="description" content="Customize bootstrap css through URL parameters without a build step" />
-	<link rel="stylesheet" href="/bootstrap/5.1.3.css?primary=gray"><!-- insert once plain so context switching is not dificult-->
+	<link rel="stylesheet" href="/bootstrap/5.1.3.css?primary=gray"><!-- insert once plain so context switching is not dificult -->
 	<link rel="stylesheet" href="{`/bootstrap/5.1.3.css?primary=${encoded_color}${encoded_other}`}">
 	<script src="https://kit.fontawesome.com/cf97b14328.js" crossorigin="anonymous"></script>
 </svelte:head>
