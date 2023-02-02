@@ -29,6 +29,7 @@ export const get = async ({params,url}) =>{
 		status = 200;
 		headers = {
 			'Cache-Control': 'max-age=604800',
+			'CDN-Cache-Control': 'max-age=15552000',//cdns cache for 6 months = 6 months * 30 days * 24 hours * 60 minutes * 60 seconds
 			'content-type': 'text/css; charset=utf-8',
 			'Access-Control-Allow-Origin': '*',//allow cross-origin requests
 		};
