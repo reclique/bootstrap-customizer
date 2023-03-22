@@ -27,7 +27,8 @@
 	<meta name="description" content="Customize bootstrap css through URL parameters without a build step" />
 	<link rel="stylesheet" href="/bootstrap/5.1.3.css?primary=gray"><!-- insert once plain so context switching is not dificult -->
 	<link rel="stylesheet" href="{`/bootstrap/5.1.3.css?primary=${encoded_color}${encoded_other}`}">
-	<script src="https://kit.fontawesome.com/cf97b14328.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://kit.fontawesome.com/cf97b14328.js" crossorigin="anonymous"></script> -->
+	<link rel="stylesheet" href="https://recliquecore.s3.amazonaws.com/ext/font-awesome/pro-6.3.0-web/css/all.min.css">
 </svelte:head>
 
 <div class="main_wrap container pt-5">
@@ -56,9 +57,7 @@
 		</div>
 
 		<h3>Insert this in your HTML</h3>
-		<pre class="mb-4 bg-secondary bg-opacity-10 p-2 px-3">
-			&lt;link href="{domain}/bootstrap/5.1.3.css?primary={encoded_color}{encoded_other}" rel="stylesheet"&gt;
-		</pre>
+		<pre class="mb-4 bg-secondary bg-opacity-10 p-2 px-3">&lt;link href="{domain}/bootstrap/5.1.3.css?primary={encoded_color}{encoded_other}" rel="stylesheet"&gt;</pre>
 
 		<h3>Elements will look like this</h3>
 		<div class="examples mb-4">
