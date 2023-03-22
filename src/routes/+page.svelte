@@ -25,8 +25,8 @@
 <svelte:head>
 	<title>Bootstrap Customizer by URL</title>
 	<meta name="description" content="Customize bootstrap css through URL parameters without a build step" />
-	<link rel="stylesheet" href="/bootstrap/5.1.3.css?primary=gray"><!-- insert once plain so context switching is not dificult -->
-	<link rel="stylesheet" href="{`/bootstrap/5.1.3.css?primary=${encoded_color}${encoded_other}`}">
+	<link rel="stylesheet" href="/bootstrap/5.2.3.css?primary=gray"><!-- insert once plain so context switching is not dificult -->
+	<link rel="stylesheet" href="{`/bootstrap/5.2.3.css?primary=${encoded_color}${encoded_other}`}">
 	<!-- <script src="https://kit.fontawesome.com/cf97b14328.js" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://recliquecore.s3.amazonaws.com/ext/font-awesome/pro-6.3.0-web/css/all.min.css">
 </svelte:head>
@@ -57,7 +57,7 @@
 		</div>
 
 		<h3>Insert this in your HTML</h3>
-		<pre class="mb-4 bg-secondary bg-opacity-10 p-2 px-3">&lt;link href="{domain}/bootstrap/5.1.3.css?primary={encoded_color}{encoded_other}" rel="stylesheet"&gt;</pre>
+		<pre class="mb-4 bg-secondary bg-opacity-10 p-2 px-3">&lt;link href="{domain}/bootstrap/5.2.3.css?primary={encoded_color}{encoded_other}" rel="stylesheet"&gt;</pre>
 
 		<h3>Elements will look like this</h3>
 		<div class="examples mb-4">
@@ -77,7 +77,8 @@
 		
 		<h3>Other Pro Tips</h3>
 		<p>You can add other paramters to the URL that would be in the <a href="https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss" target="_blank">_variables.scss</a> in bootstrap. For example: &min-contrast-ratio=2</p>
-		<input bind:value="{other_variables}" class="form-control mb-4">
+		<label for="other_params">Other Parameters</label>
+		<input id="other_params" bind:value="{other_variables}" class="form-control mb-4">
 	</main>
 	<footer>
 		<i class="fa-regular fa-code"></i> by <a href="https://reclique.com" target="_blank">ReClique</a>
