@@ -13,7 +13,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-
+		csrf: {
+			checkOrigin: false
+		},
 		// hydrate the <div id="svelte"> element in src/app.html
 		// target: '#svelte'
 	}
