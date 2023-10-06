@@ -3,7 +3,7 @@
 	
 	let import_color = '#f26522';
 	$: encoded_color = encodeURIComponent(import_color);
-	let other_variables = 'min-contrast-ratio=2&link-decoration=none&body-color=#34495e';
+	let other_variables = 'min-contrast-ratio=2&link-decoration=none&body-color=#34495e&theme[tertiary]=red&theme[quaternary]=blue';
 	$: encoded_other = other_variables.match(/^\&/) ? other_variables.replace('#','%23') : `&${other_variables}`.replace('#','%23');
 
 	let yr = (new Date()).getFullYear();
@@ -76,7 +76,18 @@
 		</div>
 		
 		<h3>Other Pro Tips</h3>
-		<p>You can add other paramters to the URL that would be in the <a href="https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss" target="_blank">_variables.scss</a> in bootstrap. For example: &min-contrast-ratio=2</p>
+		<ul>
+			<li>
+				You can add other paramters to the URL that would be in the <a href="https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss" target="_blank">_variables.scss</a> in bootstrap. For example: <pre class="d-inline">&min-contrast-ratio=2</pre>
+			</li>
+			<li>
+				You can add more items to the theme like tertiary by defining a theme parameter with comma-separated key:value pairs.
+				For example: <pre class="d-inline">&theme[]=tertiary:<span class="text-tertiary">red</span>&theme[]=quaternary:<span class="text-quaternary">blue</span></pre>
+			</li>
+			<li>
+				Remember that # (hashes) have to be encoded or it does not make it to the server
+			</li>
+		</ul>
 		<label for="other_params">Other Parameters</label>
 		<input id="other_params" bind:value="{other_variables}" class="form-control mb-4">
 	</main>
