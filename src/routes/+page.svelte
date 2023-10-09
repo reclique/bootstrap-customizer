@@ -82,7 +82,7 @@
 			</li>
 			<li>
 				You can add more items to the theme like tertiary by defining a theme parameter with comma-separated key:value pairs.
-				For example: <pre class="d-inline">&theme[]=tertiary:<span class="text-tertiary">red</span>&theme[]=quaternary:<span class="text-quaternary">blue</span></pre>
+				For example: <pre class="d-inline">&theme[tertiary]=<span class="text-tertiary">red</span>&theme[quaternary]=<span class="text-quaternary">blue</span></pre>
 			</li>
 			<li>
 				Remember that # (hashes) have to be encoded or it does not make it to the server
