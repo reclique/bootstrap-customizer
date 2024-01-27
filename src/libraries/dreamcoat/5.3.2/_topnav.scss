@@ -1,0 +1,30 @@
+.top-nav {
+  position: relative;
+  .nav-badge {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    justify-content: center;
+    height: 1rem;
+    width: 1rem;
+    font-size: $font-size-xs;
+    color: $a-10;
+  }
+
+  .input-group.top-nav-search {
+    .form-search-wrapper {
+      @include media-breakpoint-down(lg) {
+        &:is(:nth-child(2)) {
+          .form-control-search {
+            border-top-left-radius: $border-radius-sm;
+            border-bottom-left-radius: $border-radius-sm;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}

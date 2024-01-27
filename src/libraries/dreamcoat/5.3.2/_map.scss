@@ -1,0 +1,432 @@
+$colors: (
+  "a": $a,
+  "b": $b,
+  "c": $c,
+  "d": $d,
+  "e": $e,
+  "f": $f,
+  "g": $g,
+  "h": $h,
+  "i": $i,
+  "j": $j,
+  "k": $k,
+  "l": $l,
+  "black": $black,
+  "white": $white,
+);
+
+$A: (
+  "a-10": $a-10,
+  "a-50": $a-50,
+  "a-100": $a-100,
+  "a-200": $a-200,
+  "a-300": $a-300,
+  "a-400": $a-400,
+  "a-500": $a-500,
+  "a-600": $a-600,
+  "a-700": $a-700,
+  "a-800": $a-800,
+);
+
+$B: (
+  "b-50": $b-50,
+  "b-100": $b-100,
+  "b-200": $b-200,
+  "b-300": $b-300,
+  "b-400": $b-400,
+  "b-500": $b-500,
+  "b-600": $b-600,
+  "b-700": $b-700,
+  "b-800": $b-800,
+);
+
+$C: (
+  "c-50": $c-50,
+  "c-100": $c-100,
+  "c-200": $c-200,
+  "c-300": $c-300,
+  "c-400": $c-400,
+  "c-500": $c-500,
+  "c-600": $c-600,
+  "c-700": $c-700,
+  "c-800": $c-800,
+);
+
+$D: (
+  "d-50": $d-50,
+  "d-100": $d-100,
+  "d-200": $d-200,
+  "d-300": $d-300,
+  "d-400": $d-400,
+  "d-500": $d-500,
+  "d-600": $d-600,
+  "d-700": $d-700,
+  "d-800": $d-800,
+);
+
+$E: (
+  "e-50": $e-50,
+  "e-100": $e-100,
+  "e-200": $e-200,
+  "e-300": $e-300,
+  "e-400": $e-400,
+  "e-500": $e-500,
+  "e-600": $e-600,
+  "e-700": $e-700,
+  "e-800": $e-800,
+);
+
+$F: (
+  "f-50": $f-50,
+  "f-100": $f-100,
+  "f-200": $f-200,
+  "f-300": $f-300,
+  "f-400": $f-400,
+  "f-500": $f-500,
+  "f-600": $f-600,
+  "f-700": $f-700,
+  "f-800": $f-800,
+);
+
+$G: (
+  "g-50": $g-50,
+  "g-100": $g-100,
+  "g-200": $g-200,
+  "g-300": $g-300,
+  "g-400": $g-400,
+  "g-500": $g-500,
+  "g-600": $g-600,
+  "g-700": $g-700,
+  "g-800": $g-800,
+);
+
+$H: (
+  "h-50": $h-50,
+  "h-100": $h-100,
+  "h-200": $h-200,
+  "h-300": $h-300,
+  "h-400": $h-400,
+  "h-500": $h-500,
+  "h-600": $h-600,
+  "h-700": $h-700,
+  "h-800": $h-800,
+);
+
+$I: (
+  "i-50": $i-50,
+  "i-100": $i-100,
+  "i-200": $i-200,
+  "i-300": $i-300,
+  "i-400": $i-400,
+  "i-500": $i-500,
+  "i-600": $i-600,
+  "i-700": $i-700,
+  "i-800": $i-800,
+);
+
+$J: (
+  "j-50": $j-50,
+  "j-100": $j-100,
+  "j-200": $j-200,
+  "j-300": $j-300,
+  "j-400": $j-400,
+  "j-500": $j-500,
+  "j-600": $j-600,
+  "j-700": $j-700,
+  "j-800": $j-800,
+);
+
+$K: (
+  "k-50": $k-50,
+  "k-100": $k-100,
+  "k-200": $k-200,
+  "k-300": $k-300,
+  "k-400": $k-400,
+  "k-500": $k-500,
+  "k-600": $k-600,
+  "k-700": $k-700,
+  "k-800": $k-800,
+);
+
+$L: (
+  "l-50": $l-50,
+  "l-100": $l-100,
+  "l-200": $l-200,
+  "l-300": $l-300,
+  "l-400": $l-400,
+  "l-500": $l-500,
+  "l-600": $l-600,
+  "l-700": $l-700,
+  "l-800": $l-800,
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "danger": $danger,
+  "success": $success,
+  "warning": $warning,
+  "info": $info,
+  "light": $secondary-100,
+  "dark": $secondary-800,
+);
+
+$primarys: (
+  "primary-50": $primary-50,
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+  "primary-500": $primary-500,
+  "primary-600": $primary-600,
+  "primary-700": $primary-700,
+  "primary-800": $primary-800,
+);
+
+$secondarys: (
+  "secondary-50": $secondary-50,
+  "secondary-100": $secondary-100,
+  "secondary-200": $secondary-200,
+  "secondary-300": $secondary-300,
+  "secondary-400": $secondary-400,
+  "secondary-500": $secondary-500,
+  "secondary-600": $secondary-600,
+  "secondary-700": $secondary-700,
+  "secondary-800": $secondary-800,
+);
+
+$dangers: (
+  "danger-50": $danger-50,
+  "danger-100": $danger-100,
+  "danger-200": $danger-200,
+  "danger-300": $danger-300,
+  "danger-400": $danger-400,
+  "danger-500": $danger-500,
+  "danger-600": $danger-600,
+  "danger-700": $danger-700,
+  "danger-800": $danger-800,
+);
+
+$successs: (
+  "success-50": $success-50,
+  "success-100": $success-100,
+  "success-200": $success-200,
+  "success-300": $success-300,
+  "success-400": $success-400,
+  "success-500": $success-500,
+  "success-600": $success-600,
+  "success-700": $success-700,
+  "Confirm-800": $success-800,
+);
+
+$warnings: (
+  "warning-50": $warning-50,
+  "warning-100": $warning-100,
+  "warning-200": $warning-200,
+  "warning-300": $warning-300,
+  "warning-400": $warning-400,
+  "warning-500": $warning-500,
+  "warning-600": $warning-600,
+  "warning-700": $warning-700,
+  "warning-800": $warning-800,
+);
+
+$infos: (
+  "warning-50": $warning-50,
+  "warning-100": $warning-100,
+  "warning-200": $warning-200,
+  "warning-300": $warning-300,
+  "warning-400": $warning-400,
+  "warning-500": $warning-500,
+  "warning-600": $warning-600,
+  "warning-700": $warning-700,
+  "warning-800": $warning-800,
+);
+
+// scss-docs-start theme-bg-subtle-map
+$theme-colors-bg-subtle: (
+  "primary": $primary-bg-subtle,
+  "secondary": $secondary-bg-subtle,
+  "danger": $danger-bg-subtle,
+  "success": $success-bg-subtle,
+  "warning": $warning-bg-subtle,
+  "info": $info-bg-subtle,
+  "light": $light-bg-subtle,
+  "dark": $dark-bg-subtle,
+);
+
+// scss-docs-start theme-text-map
+$theme-colors-text: (
+  "primary": $primary-text-emphasis,
+  "secondary": $secondary-text-emphasis,
+  "danger": $danger-text-emphasis,
+  "success": $success-text-emphasis,
+  "warning": $warning-text-emphasis,
+  "info": $info-text-emphasis,
+  "light": $light-text-emphasis,
+  "dark": $dark-text-emphasis,
+);
+// scss-docs-end theme-text-map
+
+// scss-docs-start theme-border-subtle-map
+$theme-colors-border-subtle: (
+  "primary": $primary-border-subtle,
+  "secondary": $secondary-border-subtle,
+  "danger": $danger-border-subtle,
+  "success": $success-border-subtle,
+  "warning": $warning-border-subtle,
+  "info": $info-border-subtle,
+  "light": $light-border-subtle,
+  "dark": $dark-border-subtle,
+);
+// scss-docs-end theme-border-subtle-map
+
+// scss docs start custom theme toast map
+$theme-colors-toast: (
+  "primary": $primary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+);
+// scss docs start custom theme alert map
+$theme-colors-alert: (
+  "primary": $primary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+);
+// scss docs end custom theme alert map
+// scss-docs-start theme-button-map
+$theme-colors-button: (
+    "primary": $primary,
+    "danger": $danger,
+    "success": $success
+);
+// scss-docs-end theme-button-map
+
+// scss-docs-start utilities-bg-colors
+$utilities-bg-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-bg-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-bg-subtle),
+  "danger-subtle": var(--#{$prefix}danger-bg-subtle),
+  "success-subtle": var(--#{$prefix}success-bg-subtle),
+  "warning-subtle": var(--#{$prefix}warning-bg-subtle),
+  "info-subtle": var(--#{$prefix}info-bg-subtle),
+  "light-subtle": var(--#{$prefix}light-bg-subtle),
+  "dark-subtle": var(--#{$prefix}dark-bg-subtle),
+);
+// scss-docs-start utilities-text-colors
+$utilities-text-emphasis-colors: (
+  "primary-emphasis": var(--#{$prefix}primary-text-emphasis),
+  "secondary-emphasis": var(--#{$prefix}secondary-text-emphasis),
+  "danger-emphasis": var(--#{$prefix}danger-text-emphasis),
+  "success-emphasis": var(--#{$prefix}success-text-emphasis),
+  "warning-emphasis": var(--#{$prefix}warning-text-emphasis),
+  "info-emphasis": var(--#{$prefix}info-text-emphasis),
+  "light-emphasis": var(--#{$prefix}light-text-emphasis),
+  "dark-emphasis": var(--#{$prefix}dark-text-emphasis),
+);
+
+$utilities-border-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-border-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-border-subtle),
+  "danger-subtle": var(--#{$prefix}danger-border-subtle),
+  "success-subtle": var(--#{$prefix}success-border-subtle),
+  "warning-subtle": var(--#{$prefix}warning-border-subtle),
+  "info-subtle": var(--#{$prefix}info-border-subtle),
+  "light-subtle": var(--#{$prefix}light-border-subtle),
+  "dark-subtle": var(--#{$prefix}dark-border-subtle),
+);
+
+$theme-colors-badge-border: (
+  "a": $a-200,
+  "a-filled": transparent,
+  "b": $b-200,
+  "b-filled": transparent,
+  "c": $c-200,
+  "c-filled": transparent,
+  "d": $d-200,
+  "d-filled": transparent,
+  "e": $e-200,
+  "e-filled": transparent,
+  "f": $f-200,
+  "f-filled": transparent,
+  "g": $g-200,
+  "g-filled": transparent,
+  "h": $h-200,
+  "h-filled": transparent,
+  "i": $i-200,
+  "i-filled": transparent,
+  "j": $j-200,
+  "j-filled": transparent,
+  "k": $k-200,
+  "k-filled": transparent,
+  "l": $l-200,
+  "l-filled": transparent,
+  "white": $black,
+);
+
+$theme-colors-dot: (
+  "primary": $primary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "secondary": $secondary,
+);
+
+$theme-colors-pill: (
+  "a": $a-100,
+  "a-filled": $a-500,
+  "b": $b-100,
+  "b-filled": $b-500,
+  "c": $c-100,
+  "c-filled": $c-500,
+  "d": $d-100,
+  "d-filled": $d-500,
+  "e": $e-100,
+  "e-filled": $e-500,
+  "f" : $f-100,
+  "f-filled": $f-500,
+  "g": $g-100,
+  "g-filled": $g-500,
+  "h": $h-100,
+  "h-filled": $h-500,
+  "i": $i-100,
+  "i-filled": $i-500,
+  "j": $j-100,
+  "j-filled": $j-500,
+  "k": $k-100,
+  "k-filled": $k-500,
+  "l": $l-100,
+  "l-filled": $l-500,
+  "white": $white
+);
+
+$theme-colors-pill-text: (
+  "a": $a-500,
+  "a-filled": $white,
+  "b": $b-500,
+  "b-filled": $white,
+  "c": $c-500,
+  "c-filled": $white,
+  "d": $d-500,
+  "d-filled": $white,
+  "e": $e-500,
+  "e-filled": $white,
+  "f": $f-500,
+  "f-filled": $white,
+  "g": $g-500,
+  "g-filled": $white,
+  "h": $h-500,
+  "h-filled": $white,
+  "i": $i-500,
+  "i-filled": $white,
+  "j": $j-500,
+  "j-filled": $white,
+  "k": $k-500,
+  "k-filled": $white,
+  "l": $l-500,
+  "l-filled": $white,
+  "white": $black,
+);

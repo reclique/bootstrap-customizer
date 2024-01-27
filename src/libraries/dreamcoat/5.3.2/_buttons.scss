@@ -1,0 +1,346 @@
+.btn {
+  font-stretch: 25%;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  box-shadow: none;
+
+  &.dark {
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.01rem;
+  }
+
+  .btn-group & {
+    &:hover {
+      z-index: 0;
+    }
+  }
+}
+
+.btn-icon-only,
+.btn-icon-right,
+.btn-icon-left {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc($btn-padding-x / 2);
+
+  &>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::before,
+  &::after,
+  &>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.btn-icon-only,
+.btn-icon-right,
+.btn-icon-left,
+.btn.dropdown-toggle {
+
+  &:not(.btn-sm)::before,
+  &:not(.btn-sm)::after,
+  &:not(.btn-sm)>i {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.btn-icon-only {
+  gap: calc($btn-padding-x / 2);
+  padding: calc($btn-padding-x / 2);
+}
+
+.dropstart .btn.dropdown-toggle,
+.btn-icon-left {
+  padding-left: calc($btn-padding-x / 2);
+}
+
+.dropdown .btn.dropdown-toggle,
+.dropdown-center .btn.dropdown-toggle,
+.dropup .btn.dropdown-toggle,
+.dropup-center .btn.dropdown-toggle,
+.dropend .btn.dropdown-toggle,
+.btn-icon-right {
+  padding-right: calc($btn-padding-x / 2);
+}
+
+.btn-3 {
+  @include font-size($font-size-xxs);
+  font-stretch: 25%;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-base;
+}
+
+.btn-sm {
+  @include font-size($font-size-sm);
+  font-stretch: 25%;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0;
+  line-height: $line-height-xs;
+
+  &.btn-icon-left,
+  &.btn-icon-right {
+    gap: calc($btn-padding-x-sm / 2);
+  }
+
+  &.btn-icon-left {
+    padding-left: calc($btn-padding-x-sm / 2);
+  }
+
+  &.btn-icon-right {
+    padding-right: calc($btn-padding-x-sm / 2);
+  }
+
+  &::before,
+  &::after,
+  &>i {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.btn-lg {
+  @include font-size($font-size-root);
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+
+  &.btn-icon-left,
+  &.btn-icon-right {
+    gap: calc($btn-padding-x-lg / 2);
+  }
+
+  &.btn-icon-left {
+    padding-left: calc($btn-padding-x-lg / 2);
+  }
+
+  &.btn-icon-right {
+    padding-right: calc($btn-padding-x-lg / 2);
+  }
+
+  &.dropdown-toggle,
+  &.btn-icon-only {
+    gap: $btn-padding-x;
+    padding: $btn-padding-x;
+  }
+}
+
+.btn-xl {
+  @include button-size($btn-padding-y-xl,
+    $btn-padding-x-xl,
+    $font-size-root,
+    $btn-border-radius-xl );
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-md;
+
+    &.btn-icon-left,
+    &.btn-icon-right {
+      gap: calc($btn-padding-x-xl / 2);
+    }
+
+    &.btn-icon-left {
+      padding-left: calc($btn-padding-x-xl / 2);
+    }
+
+    &.btn-icon-right {
+      padding-right: calc($btn-padding-x-xl / 2);
+    }
+
+  &.dropdown-toggle,
+  &.btn-icon-only {
+    gap: $btn-padding-y-xl;
+    padding: $btn-padding-y-xl;
+  }
+}
+
+@each $color, $value in $theme-colors-button {
+  .btn-#{$color} {
+    @include button-variant($value,
+      $value,
+      $white,
+      $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+      $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+      $hover-color: $white,
+      $active-background: shade-color($value, $btn-active-bg-shade-amount),
+      $active-border: shade-color($value, $btn-active-border-shade-amount),
+      $active-color: $white,
+      $disabled-background: $a-100,
+      $disabled-border: $a-100,
+      $disabled-color: $a-300 );
+
+    .btn-group & {
+      @include button-variant($value,
+        $white,
+        $white,
+        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+        $hover-border: $white,
+        $hover-color: $white,
+        $active-background: shade-color($value, $btn-active-bg-shade-amount),
+        $active-border: $white,
+        $active-color: $white,
+        $disabled-background: $a-100,
+        $disabled-border: $a-100,
+        $disabled-color: $a-300 );
+    }
+  }
+
+  .btn-text-#{$color} {
+    @if $color ==primary {
+      @include button-variant(transparent,
+        transparent,
+        $a-500,
+        $hover-background: $primary-100,
+        $hover-border: $primary-100,
+        $hover-color: $a-800,
+        $active-background: $primary-200,
+        $active-border: $primary-200,
+        $active-color: $a-800,
+        $disabled-background: transparent,
+        $disabled-border: transparent,
+        $disabled-color: $a-300 );
+    }
+
+    @else {
+      @include button-variant(transparent,
+        transparent,
+        $value,
+        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+        $hover-color: $white,
+        $active-background: shade-color($value, $btn-active-bg-shade-amount),
+        $active-border: shade-color($value, $btn-active-border-shade-amount),
+        $active-color: $white,
+        $disabled-background: transparent,
+        $disabled-border: transparent,
+        $disabled-color: $a-300 );
+    }
+  }
+
+  .btn-subtle-#{$color} {
+    @if $color ==primary {
+      @include button-variant(transparent,
+        transparent,
+        $a-500,
+        $hover-background: transparent,
+        $hover-border: transparent,
+        $hover-color: $value,
+        $active-background: transparent,
+        $active-border: transparent,
+        $active-color: $primary-600,
+        $disabled-background: transparent,
+        $disabled-border: transparent,
+        $disabled-color: $a-300 );
+    }
+
+    @else {
+      @include button-variant(transparent,
+        transparent,
+        $a-500,
+        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+        $hover-color: $white,
+        $active-background: shade-color($value, $btn-active-bg-shade-amount),
+        $active-border: shade-color($value, $btn-active-border-shade-amount),
+        $active-color: $white,
+        $disabled-background: transparent,
+        $disabled-border: transparent,
+        $disabled-color: $a-300 );
+    }
+  }
+}
+
+.btn-secondary {
+  @include button-variant(transparent,
+    $a-200,
+    $a-600,
+    $hover-background: $primary-100,
+    $hover-border: $primary-100,
+    $hover-color: $a-800,
+    $active-background: $primary-200,
+    $active-border: $primary-200,
+    $active-color: $a-800,
+    $disabled-background: $a-100,
+    $disabled-border: $a-100,
+    $disabled-color: $a-300 );
+
+  .btn-group & {
+    @include button-variant(transparent,
+      $a-200,
+      $a-600,
+      $hover-background: $primary-100,
+      $hover-border: $a-200,
+      $hover-color: $a-800,
+      $active-background: $primary-200,
+      $active-border: $a-200,
+      $active-color: $a-800,
+      $disabled-background: $a-100,
+      $disabled-border: $a-100,
+      $disabled-color: $a-300 );
+  }
+}
+
+.btn-tertiary {
+  @include button-variant($a-10,
+    $a-200,
+    $a-500,
+    $hover-background: $primary-100,
+    $hover-border: $primary-100,
+    $hover-color: $a-800,
+    $active-background: $primary-200,
+    $active-border: $primary-200,
+    $active-color: $a-800,
+    $disabled-background: $a-100,
+    $disabled-border: $a-100,
+    $disabled-color: $a-300 );
+
+  .btn-group & {
+    @include button-variant($a-10,
+      $a-200,
+      $a-500,
+      $hover-background: $primary-100,
+      $hover-border: $a-200,
+      $hover-color: $a-800,
+      $active-background: $primary-200,
+      $active-border: $a-200,
+      $active-color: $a-800,
+      $disabled-background: $a-100,
+      $disabled-border: $a-100,
+      $disabled-color: $a-300 );
+  }
+}
+
+.btn-dark {
+  @include button-variant($a-700,
+    $a-500,
+    $a-10,
+    $hover-background: $primary-400,
+    $hover-border: $primary-500,
+    $hover-color: $a-10,
+    $active-background: $primary-500,
+    $active-border: $primary-600,
+    $active-color: $a-10,
+    $disabled-background: $a-100,
+    $disabled-border: $a-100,
+    $disabled-color: $a-300 );
+}
+
+.btn-subtle-dark {
+  @include button-variant(transparent,
+      transparent,
+      $a-10,
+      $hover-background: $primary-400,
+      $hover-border: $primary-500,
+      $hover-color: $a-10,
+      $active-background: $primary-500,
+      $active-border: $primary-600,
+      $active-color: $a-10,
+      $disabled-background: transparent,
+      $disabled-border: transparent,
+      $disabled-color: $a-300 );
+}

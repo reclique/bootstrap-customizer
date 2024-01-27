@@ -1,0 +1,254 @@
+//
+// Web Fonts
+// IMPORTANT: If new font-weight or font-stretch values are added to the design
+//            that are outside of the current value ranges, then you need to:
+//            - regenerate the .woff2 files on Google Fonts,
+//            - replace them in the project's corresponding "fonts/*" folder
+//
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-stretch: 100%;
+    font-style: italic;
+    font-weight: 100 900;
+    src: url('../fonts/Montserrat/Montserrat-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-stretch: 100%;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('../fonts/Montserrat/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto Flex';
+    font-stretch: 25% 100%;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('../fonts/RobotoFlex/RobotoFlex.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/RobotoMono/RobotoMono.woff2') format('woff2');
+  }
+
+
+//
+// Headings
+//
+
+h1,
+.h1 {
+    font-weight: $font-weight-light;
+    line-height: $line-height-md;
+
+    b, strong {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+h2,
+.h2 {
+    font-weight: $font-weight-normal;
+    line-height: $line-height-sm;
+
+    b, strong {
+        font-weight: $font-weight-bold;
+    }
+}
+
+h3,
+.h3 {
+    font-weight: $font-weight-400;
+    line-height: 1.6;
+
+    b, strong {
+        font-weight: $font-weight-700;
+    }
+}
+
+h4,
+.h4 {
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-md;
+
+    b, strong {
+        font-weight: $font-weight-700;
+    }
+}
+
+h5,
+.h5 {
+    font-family: $font-family-base;
+    font-stretch: 25%;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-md;
+
+    b, strong {
+        font-weight: $font-weight-bold;
+    }
+}
+
+.l-1 {
+    @extend h1;
+}
+
+.l-2 {
+    @extend h2;
+}
+
+.l-3 {
+    @extend h3;
+}
+
+.l-4 {
+    @extend h4;
+}
+
+.l-5 {
+    @extend h5;
+}
+
+
+//
+// Body Text
+//
+
+// body standard text
+.body-1 {
+    @include font-size($font-size-base);
+    line-height: $line-height-base;
+}
+
+// body small text
+.body-2 {
+    @include font-size($font-size-xs);
+    line-height: $line-height-sm;
+
+    b, strong {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+
+//
+// Labels
+//
+
+.label {
+    @include font-size($font-size-xs);
+    line-height: $line-height-sm;
+}
+
+.label-1B {
+    @include font-size($font-size-xs);
+    font-weight: $font-weight-700;
+    line-height: $line-height-sm;
+}
+
+.label-2 {
+    @include font-size($font-size-sm);
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-xs;
+}
+
+.label-2B {
+    @include font-size($font-size-sm);
+    font-weight: $font-weight-700;
+    line-height: $line-height-xs;
+}
+
+
+//
+// Information
+//
+.info {
+    @include font-size($font-size-base);
+    font-stretch: 25%;
+}
+
+.info-2 {
+    @include font-size($font-size-xs);
+    font-style: italic;
+    line-height: $line-height-sm;
+}
+
+
+//
+// Hyperlinks
+//
+.a, .a-B, .a-2, .a-3 {
+    @extend a;
+}
+
+.a-B {
+    font-weight: $font-weight-bold;
+}
+
+.a-2, .a-3 {
+    font-stretch: 75%;
+}
+
+.a-3 {
+    @include font-size($font-size-xs);
+    line-height: $line-height-sm;
+}
+
+//
+// Help Text
+//
+.help {
+    @include font-size($font-size-sm);
+    line-height: $line-height-xs;
+}
+
+
+//
+// Numbers
+//
+
+.number {
+    @include font-size($font-size-base);
+
+    b {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+.number-2 {
+    @include font-size($font-size-root * 1.125);
+    line-height: $line-height-sm;
+
+    b {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+.number-3 {
+    @include font-size($font-size-root * 1.5);
+    line-height: $line-height-sm;
+
+    b {
+        font-weight: $font-weight-bold;
+    }
+}
+
+
+//
+// Code
+//
+code {
+    @include font-size($font-size-base);
+    font-weight: $font-weight-400;
+    line-height: $line-height-base;
+    letter-spacing: -0.035rem;
+}

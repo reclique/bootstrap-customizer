@@ -1,0 +1,21 @@
+textarea.form-control {
+  max-height: 100% !important;
+
+  &~.textarea-description {
+    margin-top: 0.25rem;
+    display: inline-block;
+  }
+}
+
+textarea:hover {
+  border-color: $input-focus-border-color;
+}
+
+.textarea-description {
+  margin-left: $form-label-margin-left;
+}
+
+.left-label {
+  @extend .form-left-label;
+  margin-top: 0.6rem;
+}

@@ -1,0 +1,44 @@
+.dot-label {
+  @extend .body-1;
+  padding-left: 0.25rem;
+}
+@each $color, $value in $theme-colors-dot {
+  .dot-#{$color} {
+    @if $color == success {
+      .dot-icon {
+        @include fa-icon-solid($fa-var-circle-small);
+        color: $value;
+      }
+    }
+    @if $color == primary {
+      .dot-icon {
+        @include fa-icon-solid($fa-var-circle-small);
+        color: $value;
+      }
+    }
+    @if $color == danger {
+      .dot-icon {
+        @include fa-icon-solid($fa-var-circle-small);
+        color: $value;
+      }
+    }
+    @if $color == warning {
+      .dot-icon {
+        @include fa-icon-solid($fa-var-circle-small);
+        color: $value;
+      }
+    }
+    @if $color == info {
+      .dot-icon {
+        @include fa-icon-solid($fa-var-circle-small);
+        color: $value;
+      }
+    }
+    @if $color == secondary {
+      .dot-icon {
+        @include fa-icon-solid($fa-var-circle-small);
+        color: $value;
+      }
+    }
+  }
+}

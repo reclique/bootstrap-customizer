@@ -1,0 +1,62 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+@use "sass:map";
+
+.badge {
+  @extend .body-2;
+  align-items: center;
+  border: $badge-border-width solid transparent;
+  display: inline-flex;
+  font-weight: $font-weight-bold;
+  gap: 0.25rem;
+  line-height: 1rem;
+
+  .pill-identifier {
+    font-weight: $font-weight-normal;
+  }
+
+  .badge-number-identifier {
+    @extend .number-2;
+    line-height: 1rem;
+  }
+
+  &.dropdown-toggle{
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+    &::after,
+    &::before{
+      width: 0.875rem;
+    }
+  }
+}
+.dropdown .badge.dropdown-toggle,
+.dropdown-center .badge.dropdown-toggle,
+.dropup .badge.dropdown-toggle,
+.dropup-center .badge.dropdown-toggle,
+.dropend .badge.dropdown-toggle{
+  padding-right: calc($badge-padding-x/2);
+}
+
+.dropstart .badge.dropdown-toggle,
+.badge-left-icon {
+  padding-left: calc($badge-padding-x/2);
+  padding-right: calc($badge-padding-x/2);
+  i {
+    width: 1rem;
+  }
+}
+
+@each $color, $value in $theme-colors-pill {
+  .badge-border-#{$color} {
+    border-color: map.get($theme-colors-badge-border, $color);
+  }
+
+  .pill-#{$color} {
+    background-color: $value;
+    color: map.get($theme-colors-pill-text, $color);
+  }
+}

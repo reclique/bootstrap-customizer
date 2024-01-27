@@ -1,0 +1,23 @@
+$primary-text-emphasis-dark: tint-color($primary, 40%);
+$neutral-text-emphasis-dark: tint-color($neutral, 40%);
+$danger-text-emphasis-dark: tint-color($danger, 40%);
+$confirm-text-emphasis-dark: tint-color($confirm, 40%);
+$alert-text-emphasis-dark: tint-color($alert, 40%);
+$light-text-emphasis-dark: $neutral-100;
+$dark-text-emphasis-dark: $neutral-300;
+
+$primary-bg-subtle-dark: shade-color($primary, 80%);
+$neutral-bg-subtle-dark: shade-color($neutral, 80%);
+$danger-bg-subtle-dark: shade-color($danger, 80%);
+$confirm-bg-subtle-dark: shade-color($confirm, 80%);
+$alert-bg-subtle-dark: shade-color($alert, 80%);
+$light-bg-subtle-dark: $neutral-800;
+$dark-bg-subtle-dark: mix($neutral-800, $black);
+
+$primary-border-subtle-dark: shade-color($primary, 40%);
+$neutral-border-subtle-dark: shade-color($neutral, 40%);
+$danger-border-subtle-dark: shade-color($danger, 40%);
+$confirm-border-subtle-dark: shade-color($confirm, 40%);
+$alert-border-subtle-dark: shade-color($alert, 40%);
+$light-border-subtle-dark: $neutral-700;
+$dark-border-subtle-dark: $neutral-800;

@@ -1,0 +1,121 @@
+.form-control {
+  @extend .body-1;
+  &-icon-left {
+    padding-left: add(calc($input-btn-padding-x * 2), $input-btn-font-size);
+    & ~ .icon-left {
+      left: 0.5rem;
+    }
+  }
+  &-icon-right {
+    padding-right: calc(
+      add(calc($input-btn-padding-y * 2), $input-btn-font-size) - 0.25rem
+    );
+    &:not(.is-invaild):not(.is-vaild) ~ .icon-right {
+      right: 0.5rem;
+    }
+  }
+  &.is-valid.form-control-icon-right,
+  &.is-invalid.form-control-icon-right {
+    padding-right: add($input-height-inner, add($input-btn-font-size, 0.5rem));
+  }
+  & ~ .icon-left,
+  & ~ .icon-right {
+    position: absolute;
+    padding: $input-btn-padding-y;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.is-valid.form-control-icon-right ~ .icon-right,
+  &.is-invalid.form-control-icon-right ~ .icon-right {
+    right: 2rem;
+  }
+}
+.form-floating {
+  & > .form-control.form-control-icon-left {
+    padding-left: calc(
+      add(calc($input-btn-padding-x * 2), $input-btn-font-size) - 0.25rem
+    );
+  }
+  & > .form-control-icon-left + label {
+    left: calc(
+      add(calc($input-btn-padding-x * 2), $input-btn-font-size) - 0.25rem
+    );
+    padding-left: 0;
+  }
+  & > .form-control-icon-right {
+    padding-right: add(calc($input-btn-padding-y * 2), $input-btn-font-size);
+  }
+  & > .is-valid.form-control-icon-right,
+  & > .is-invalid.form-control-icon-right {
+    padding-right: add($input-height-inner, add($input-btn-font-size, 0.75rem));
+  }
+}
+.form-control:hover {
+  border-color: $primary-400;
+}
+.form-control-readonly {
+  box-shadow: none;
+  border-color: transparent;
+  &:focus {
+    box-shadow: none;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &:hover {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+.form-control:disabled {
+  box-shadow: none;
+  border: none;
+  &::placeholder {
+    color: $a-300;
+  }
+}
+
+.form-floating > .form-control {
+  max-height: 1rem;
+  min-height: 2.5rem;
+  &:disabled {
+    &::placeholder {
+      color: transparent;
+    }
+    & + label {
+      color: $a-300;
+    }
+  }
+  & + label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form-control.is-valid {
+  background-image: escape-svg($form-feedback-icon-check);
+  background-size: 1rem;
+  &:hover {
+    background-image: escape-svg($form-feedback-icon-check-hover);
+  }
+  &:focus {
+    background-image: escape-svg($form-feedback-icon-check);
+  }
+}
+
+.form-control.is-invalid {
+  background-image: escape-svg($form-feedback-icon-invalid);
+  background-size: 1rem;
+  &:hover {
+    background-image: escape-svg($form-feedback-icon-invalid-hover);
+  }
+  &:focus {
+    background-image: escape-svg($form-feedback-icon-invalid);
+  }
+}

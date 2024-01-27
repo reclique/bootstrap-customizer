@@ -1,0 +1,60 @@
+.toast-header {
+  @extend .l-4;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  .toast-icon {
+    padding-right: 0.5rem;
+    display: inline-block;
+    font-size: 1.25em;
+  }
+  .btn-close {
+    box-shadow: none;
+    font-size: 0.8rem;
+  }
+}
+.toast-body {
+  @extend .body-1;
+  padding-top: $toast-padding-y;
+}
+.toast-footer {
+  padding-inline: $toast-padding-y;
+  padding-bottom: $toast-padding-y;
+  text-align: right;
+  .error-code {
+    @extend .number;
+    color: $a-500;
+    padding-inline: $toast-padding-y;
+    padding-bottom: 0.25rem;
+  }
+}
+
+@each $color, $value in $theme-colors-toast {
+  .toast-#{$color} {
+    border-left: 4px solid $value;
+    background-color: tint-color($value, 96%);
+    @if $color == success {
+      .toast-icon {
+        @include fa-icon-regular($fa-var-check-circle);
+        color: $value;
+      }
+    }
+    @if $color == primary {
+      .toast-icon {
+        @include fa-icon-regular($fa-var-info-circle);
+        color: $value;
+      }
+    }
+    @if $color == danger {
+      .toast-icon {
+        @include fa-icon-regular($fa-var-exclamation-circle);
+        color: $value;
+      }
+    }
+    @if $color == warning {
+      .toast-icon {
+        @include fa-icon-regular($fa-var-exclamation-triangle);
+        color: $value;
+      }
+    }
+  }
+}

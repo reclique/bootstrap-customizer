@@ -1,0 +1,32 @@
+.form-check {
+  padding-top: $form-check-padding-top;
+  padding-bottom: $form-check-padding-bottom;
+}
+
+.form-check-input {
+  cursor: pointer;
+  &:hover {
+    border-color: $primary-400;
+    outline: 0;
+  }
+}
+
+.form-check-input-indeterminate[type="checkbox"] {
+  background-color: $primary;
+  border-color: $primary;
+  background-image: $form-check-input-indeterminate-bg-image;
+
+  &:checked {
+    background-image: $form-check-input-indeterminate-bg-image-checked;
+  }
+}
+
+.form-switch {
+  .form-check-input {
+    background-color: $a-200;
+
+    &:checked {
+      background-color: $primary;
+    }
+  }
+}

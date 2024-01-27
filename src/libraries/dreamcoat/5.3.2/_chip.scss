@@ -1,0 +1,68 @@
+.chip {
+    align-items: center;
+    background-color: $a-100;
+    display: inline-flex;
+    gap: 0.5rem;
+
+    &:hover {
+        background-color: $i-100;
+
+        .chip-text {
+            color: $i-600;
+        }
+
+        .chip-icon-color {
+            color: $i;
+        }
+    }
+
+    &:active {
+        background-color: $i-100;
+        border-color: $i;
+
+        .chip-text {
+            color: $i-600;
+        }
+
+        .chip-close-icon {
+            color: $i-600;
+        }
+
+        .chip-icon-color {
+            color: $i-600;
+        }
+    }
+
+    .chip-text {
+        color: $a-600;
+    }
+
+    .chip-left-icon {
+        align-items: center;
+        display: flex;
+        margin-left: -(calc($badge-padding-x/2));  
+    }
+
+    .chip-right-icon {
+        align-items: center;
+        display: flex;
+        margin-right: -(calc($badge-padding-x/2));
+    }
+
+    .chip-number-identifier {
+        @extend .number-2;
+        line-height: 1rem;
+    }
+}
+
+.chip-close-icon {
+    color: $a-400;
+}
+
+.chip-icon-color {
+    color: $a;
+}
+
+.chip-identifier {
+    font-weight: $font-weight-normal;
+}

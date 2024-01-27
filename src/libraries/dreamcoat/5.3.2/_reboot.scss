@@ -1,0 +1,18 @@
+//
+// Body Text
+//
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+small,
+.small {
+  @include font-size($font-size-xs);
+  line-height: $line-height-sm;
+
+  b, strong {
+    font-weight: $font-weight-semibold;
+  }
+}

@@ -1,0 +1,37 @@
+$fa-font-path: '../fonts/FontAwesome';
+
+@import './icons/fontawesome';
+@import './icons/regular';
+@import './icons/solid';
+
+
+/* Font Awesome - XL (Regular and Solid) */
+.fa-xl {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+/* FontAwesome - Large (Regular and Solid) */
+.fa-lg {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+/* Font Awesome - Medium (Regular and Solid) */
+.fa-md {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+/* Font Awesome - Small (Regular and Solid) */
+.fa-sm {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+/* Font Awesome - Extra Small (Regular and Solid) */
+.fa-xs {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+}
+

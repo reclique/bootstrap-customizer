@@ -1,0 +1,58 @@
+.alert {
+    @extend .body-1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $a-600;
+
+    .alert-icon {
+        font-size: 1rem;
+    }
+
+    .banner-title {
+        @extend .body-1;
+        margin-left: 0.5rem;
+        font-weight: 600;
+    }
+    .btn-close {
+        box-shadow: none;
+        padding: 1.1rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@each $color, $value in $theme-colors-alert {
+    .alert-#{$color} {
+        border-left: 4px solid $value;
+        background-color: tint-color($value, 96%);
+
+        @if $color == success {
+            .alert-icon {
+                @include fa-icon-regular($fa-var-check);
+                color: $value;
+            }
+        }
+
+        @if $color == danger {
+            .alert-icon {
+                @include fa-icon-regular($fa-var-exclamation-circle);
+                color: $value;
+            }
+        }
+
+        @if $color == warning {
+            .alert-icon {
+                @include fa-icon-regular($fa-var-exclamation-triangle);
+                color: $value;
+            }
+        }
+
+        @if $color == primary {
+            .alert-icon {
+                @include fa-icon-regular($fa-var-info-circle);
+                color: $value;
+            }
+        }
+        
+    }
+}

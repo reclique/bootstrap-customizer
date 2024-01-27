@@ -1,0 +1,19 @@
+.autocomplete {
+    position: relative;
+
+    .list-group {
+        box-shadow: $dropdown-box-shadow;
+        position: absolute;
+        top: calc($input-btn-font-size + 0.5rem + calc($input-btn-padding-y * 2));
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.15s linear;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

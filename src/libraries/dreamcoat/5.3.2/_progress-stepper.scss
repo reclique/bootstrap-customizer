@@ -1,0 +1,9 @@
+.progress-stepper {
+  @extend .body-2;
+  display: flex !important;
+  position: relative;
+
+  ul {
+    gap: 0.25rem;
+  }
+}

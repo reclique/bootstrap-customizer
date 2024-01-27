@@ -1,0 +1,15 @@
+.form-label {
+  @extend .label;
+}
+
+.form-left-label {
+  max-width: 9rem;
+  text-align: right;
+  white-space: break-spaces;
+  width: 9rem;
+  word-wrap: break-word;
+}
+
+.label-disabled {
+  color: $a-300;
+}
