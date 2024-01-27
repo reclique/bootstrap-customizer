@@ -52,15 +52,15 @@ export const GET = async ({params,url}:RequestEvent) =>{
 					theme = '';
 				}
 			}
-	
-			let file = fs.readFileSync(`src/bs_versions/${version}/bootstrap.scss`).toString();
+
+			let file = fs.readFileSync(`src/libraries/bootstrap/${version}/bootstrap.scss`).toString();
 			if(theme){
 				file = file.replace('@import "variables";','@import "variables";\n'+theme)
 			}
 			const prefix = prefixes.join('\n') + '\n';
 			const to_compile = prefix + file;
 			const result = await sass.compileStringAsync(to_compile, {
-				loadPaths: [`src/bs_versions/${version}`],
+				loadPaths: [`src/libraries/bootstrap/${version}`],
 			});
 	
 			// let result = await sass.compileStringAsync(prefix+'body{color:$primary;}');
