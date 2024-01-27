@@ -5,8 +5,24 @@ import type { RequestEvent } from '@sveltejs/kit';
 export const GET = async ({params,url}:RequestEvent) =>{
 	let response_body = 'Undefined error';
 	try{
-		const {version} = params;
+		interface Library{
+			entry:string;
+		}
+		const libraries:Record<string,Library> = {
+			bootstrap:{
+				entry:'bootstrap.scss',
+			},
+			dreamcoat:{
+				entry:'styles.scss'
+			}
+		};
+
+		const {version,library} = params;
 		if(!version) throw new Error('`version` is not defined');
+		if(!library || !libraries[library]) throw new Error('`library` is not defined');
+
+		const entry_file = libraries[library].entry;
+
 		const query = url.searchParams;
 		const prefixes = [];
 		for(const key of query.keys()){
@@ -19,7 +35,7 @@ export const GET = async ({params,url}:RequestEvent) =>{
 		const sha_for_cache = await sha256(url.toString());
 		const folder_of_cache = `./static/cache`;
 		const path_of_cache_file = `${folder_of_cache}/${sha_for_cache}.css`;
-		const has_cache_file = fs.existsSync(path_of_cache_file)
+		const has_cache_file = false;//fs.existsSync(path_of_cache_file)
 		//#endregion cache
 
 		if(has_cache_file){//read file
@@ -53,14 +69,16 @@ export const GET = async ({params,url}:RequestEvent) =>{
 				}
 			}
 
-			let file = fs.readFileSync(`src/libraries/bootstrap/${version}/bootstrap.scss`).toString();
+			
+
+			let file = fs.readFileSync(`src/libraries/${library}/${version}/${entry_file}`).toString();
 			if(theme){
 				file = file.replace('@import "variables";','@import "variables";\n'+theme)
 			}
 			const prefix = prefixes.join('\n') + '\n';
 			const to_compile = prefix + file;
 			const result = await sass.compileStringAsync(to_compile, {
-				loadPaths: [`src/libraries/bootstrap/${version}`],
+				loadPaths: [`src/libraries/${library}/${version}`],
 			});
 	
 			// let result = await sass.compileStringAsync(prefix+'body{color:$primary;}');
