@@ -4,18 +4,18 @@ $white: #fff;
 $black: #000;
 
 // scss-docs-start color-variables
-$a: #565c70; // neutral
-$b: #8f5b99;
-$c: #f6af27;
-$d: #8d686f;
-$e: #4283b3;
-$f: #02dfc5;
-$g: #ec368d;
-$h: #af26be;
-$i: #4597f7; // primary
-$j: #ed0827; // danger
-$k: #2aca91; // success
-$l: #ff6542; // warning
+$a: #565c70!default; // neutral
+$b: #8f5b99!default;
+$c: #f6af27!default;
+$d: #8d686f!default;
+$e: #4283b3!default;
+$f: #02dfc5!default;
+$g: #ec368d!default;
+$h: #af26be!default;
+$i: #4597f7!default; // primary
+$j: #ed0827!default; // danger
+$k: #2aca91!default; // success
+$l: #ff6542!default; // warning
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
@@ -142,14 +142,14 @@ $l-600: shade-color($l, 25%);
 $l-700: shade-color($l, 50%);
 $l-800: shade-color($l, 66.6%);
 
-$primary: $i;
-$secondary: $a;
-$success: $k;
-$warning: $l;
-$danger: $j;
-$info: $f;
-$light: $a-100;
-$dark: $a-800;
+$primary: $i!default;
+$secondary: $a!default;
+$success: $k!default;
+$warning: $l!default;
+$danger: $j!default;
+$info: $f!default;
+$light: $a-100!default;
+$dark: $a-800!default;
 
 $primary-50: $i-50;
 $primary-100: $i-100;
