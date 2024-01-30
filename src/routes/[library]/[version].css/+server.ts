@@ -35,7 +35,7 @@ export const GET = async ({params,url}:RequestEvent) =>{
 		const sha_for_cache = await sha256(url.toString());
 		const folder_of_cache = `./static/cache`;
 		const path_of_cache_file = `${folder_of_cache}/${sha_for_cache}.css`;
-		const has_cache_file = false;//fs.existsSync(path_of_cache_file)
+		const has_cache_file = fs.existsSync(path_of_cache_file)
 		//#endregion cache
 
 		if(has_cache_file){//read file
